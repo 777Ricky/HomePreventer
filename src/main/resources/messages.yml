@@ -1,0 +1,28 @@
+prefix: "&8\u00bb&6 "
+
+# Error messages
+error:
+  prefix-addon: "&c"
+  no-permission: "You need the permission '%s' to do that!"
+  command:
+    prefix-addon: "&c"
+    only-players: "Only players can use this command!"
+    no-player: "The player '%s' does not exist!"
+    not-number: "'%s' is not a valid number!"
+
+# Command-related messages
+command:
+  homepreventer:
+    help:
+      prefix: ""
+      message: |
+        &8&m---------------&e HomePreventer &8&m---------------
+        &7/homepreventer &creload &8-&6 Reloads the config.
+        &7/homepreventer &cversion &8-&6 Shows the plugin version.
+        &7/homepreventer &chelp|? &8-&6 Shows this help message.
+    version: "You are running &c%s&6 version &c%s&6."
+    reloaded: "Reloaded the config successfully!"
+
+event:
+  home-removed: "&cYour home '%s' was removed because it was in enemy land / warzone."
+  sethome-prevented: "&cYou cannot set a home here because you are in enemy land / warzone."

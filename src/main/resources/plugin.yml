@@ -1,0 +1,11 @@
+name: HomePreventer
+version: '${project.version}'
+main: me.rickylafleur.homepreventer.HomePreventer
+api-version: 1.19
+authors: [Ricky Lafleur]
+
+commands:
+  homepreventer:
+    description: The main command for HomePreventer.
+    # aliases: []
+    usage: "\u00A7cRicky hecc'd something up."
