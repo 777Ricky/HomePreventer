@@ -26,8 +26,8 @@ public class CommandSetHomeWrapper extends CommandWrapper {
             return super.onCommand(sender, command, label, args);
         }
 
-        Player player = (Player) sender;
-        Location location = player.getLocation();
+        final Player player = (Player) sender;
+        final Location location = player.getLocation();
 
         if (!canHaveHome(location)) {
             player.sendMessage(plugin.tr("event.sethome-prevented"));

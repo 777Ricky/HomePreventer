@@ -33,9 +33,9 @@ public class MessageHandler {
      * @return The prefix for the given key.
      */
     private String getPrefixFor(String key) {
-        String baseKey = getBaseKey(key);
-        String basePrefix = messages.getOrDefault(baseKey + ".prefix", messages.getOrDefault("prefix", ""));
-        String addon = messages.getOrDefault(baseKey + ".prefix-addon", "");
+        final String baseKey = getBaseKey(key);
+        final String basePrefix = messages.getOrDefault(baseKey + ".prefix", messages.getOrDefault("prefix", ""));
+        final String addon = messages.getOrDefault(baseKey + ".prefix-addon", "");
 
         return ChatColor.translateAlternateColorCodes('&', basePrefix + addon);
     }

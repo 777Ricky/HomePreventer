@@ -22,7 +22,8 @@ public final class HomePreventer extends JavaPlugin {
     public static final String BYPASS_PERM = "homepreventer.bypass";
 
     private static HomePreventer instance;
-    private MessageHandler messages = new MessageHandler();
+
+    private final MessageHandler messages = new MessageHandler();
     private final Set<CommandWrapper> commandWrapperSet = new HashSet<>();
 
     public static HomePreventer getInstance() {
@@ -94,7 +95,7 @@ public final class HomePreventer extends JavaPlugin {
     }
 
     public boolean checkPermission(CommandSender target, String permission, boolean sendMessage) {
-        String fullPermission = String.format("%s.%s", getName(), permission);
+        final String fullPermission = String.format("%s.%s", getName(), permission);
 
         if (!target.hasPermission(fullPermission)) {
             if (sendMessage) {
