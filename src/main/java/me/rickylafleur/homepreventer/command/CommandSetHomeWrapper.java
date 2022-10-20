@@ -22,11 +22,10 @@ public class CommandSetHomeWrapper extends CommandWrapper {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player) || sender.hasPermission(HomePreventer.BYPASS_PERM)) {
+        if (!(sender instanceof final Player player) || sender.hasPermission(HomePreventer.BYPASS_PERM)) {
             return super.onCommand(sender, command, label, args);
         }
 
-        final Player player = (Player) sender;
         final Location location = player.getLocation();
 
         if (!canHaveHome(location)) {
