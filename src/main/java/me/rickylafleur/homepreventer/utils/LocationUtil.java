@@ -8,6 +8,8 @@ public class LocationUtil {
     private LocationUtil() {}
 
     public static boolean canHaveHome(Location location) {
+        if (location == null) return true;
+
         return HomePreventer.getInstance().getConfig().getStringList("worlds").stream()
                 .noneMatch(s -> s.equals(location.getWorld().getName()));
     }
