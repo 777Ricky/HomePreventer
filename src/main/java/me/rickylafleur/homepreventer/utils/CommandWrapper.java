@@ -1,5 +1,7 @@
 package me.rickylafleur.homepreventer.utils;
 
+import me.rickylafleur.homepreventer.HomePreventer;
+import me.rickylafleur.homepreventer.command.CommandHomeTabCompletion;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,6 +22,10 @@ public class CommandWrapper implements CommandExecutor {
 
         originalExecutor = pluginCommand.getExecutor();
         pluginCommand.setExecutor(this);
+
+        if (pluginCommand.getName().equalsIgnoreCase("home")) {
+            pluginCommand.setTabCompleter(new CommandHomeTabCompletion());
+        }
     }
 
     public void unhook() {

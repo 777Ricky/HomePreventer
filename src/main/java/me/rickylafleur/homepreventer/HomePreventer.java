@@ -1,6 +1,7 @@
 package me.rickylafleur.homepreventer;
 
 import me.rickylafleur.homepreventer.command.CommandHomePreventer;
+import me.rickylafleur.homepreventer.command.CommandHomeTabCompletion;
 import me.rickylafleur.homepreventer.command.CommandHomeWrapper;
 import me.rickylafleur.homepreventer.command.CommandSetHomeWrapper;
 import me.rickylafleur.homepreventer.listener.PluginListener;
