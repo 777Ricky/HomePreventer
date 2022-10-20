@@ -30,10 +30,10 @@ public class CommandHomeTabCompletion implements TabCompleter {
 
                 if (target == null) return Collections.emptyList();
 
-                return target.getHomes().stream().map(s -> target.getName() + ":" + s).toList();
+                return target.getHomes().stream().map(s -> target.getName() + ":" + s).sorted().toList();
             }
         }
 
-        return user.getHomes();
+        return user.getHomes().stream().sorted().toList();
     }
 }
